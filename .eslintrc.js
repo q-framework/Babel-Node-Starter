@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['alloy'],
+  extends: ['alloy', 'plugin:prettier/recommended'],
   env: {
     // Your environments (which contains several predefined global variables)
     //
