@@ -7,6 +7,7 @@
     "serve": "node dist/index.js",
     "start": "nodemon --inspect --exec 'babel-node --nolazy src/index.js'",
     "lint": "eslint \"**/*.js\" --fix",
+    "format": "prettier --check --write \"**/*\" --ignore-path .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
@@ -24,6 +25,7 @@
     "eslint": "^8.55.0",
     "eslint-config-alloy": "^5.1.2",
     "nodemon": "^3.0.2",
+    "prettier": "^3.1.1",
     "rimraf": "^5.0.5"
   }
 }
