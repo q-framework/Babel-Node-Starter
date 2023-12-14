@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "babel-node-starter",
   "scripts": {
-    "build": "rimraf dist && babel src --out-dir dist",
+    "build": "rimraf dist && babel src --out-dir dist --ignore \"**/*.test.js\"",
     "serve": "node dist/index.js",
     "start": "nodemon --inspect --exec 'babel-node --nolazy src/index.js'",
     "lint": "eslint \"**/*.js\" --fix",
     "format": "prettier --check --write \"**/*\" --ignore-path .gitignore",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rimraf coverage && jest --coverage"
   },
   "license": "MIT",
   "dependencies": {
@@ -22,8 +22,11 @@
     "@babel/node": "^7.22.19",
     "@babel/preset-env": "^7.23.6",
     "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
+    "babel-jest": "^29.7.0",
     "eslint": "^8.55.0",
     "eslint-config-alloy": "^5.1.2",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.2",
     "prettier": "^3.1.1",
     "rimraf": "^5.0.5"
